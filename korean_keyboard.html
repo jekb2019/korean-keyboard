@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="korean_keyboard.css">
     <title>Korean Keyboard Online</title>
+    <script src="js/jquery.js"></script>
+    <script src="korean_keyboard.js"></script>
   </head>
   <body>
     <div id="whole-wrapper">
@@ -30,10 +32,10 @@
       </div>
       <div id="control-menu">
         <div>
-          <button class="control-btn" type="button">Copy Text</button>
-          <button class="control-btn" type="button">Save Text</button>
-          <button class="control-btn" type="button">Clear Text</button>
-          <button class="control-btn" type="button">Search Google</button>
+          <button class="control-btn" id="copy" type="button">Copy Text</button>
+          <button class="control-btn" id="clear" type="button">Clear Text</button>
+          <button class="control-btn" id="search-google" type="button">Search Google</button>
+          <button class="control-btn" id="search-dic" type="button">Search Dictionary</button>
         </div>
         <div id="control-scale">
           <label for="font-size">Font Size</label>
@@ -44,59 +46,59 @@
         <div id="keyboard">
           <div id="row1" class="row">
             <button class="key-button" type="button">
-              <div class="little-letter">~</div>
-              <div class="big-letter">`</div>
+              <div class="little-letter"><p class="shifted">~</p></div>
+              <div class="big-letter"><p>`</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">!</div>
-              <div class="big-letter">1</div>
+              <div class="little-letter"><p class="shifted">!</p></div>
+              <div class="big-letter"><p>1</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">@</div>
-              <div class="big-letter">2</div>
+              <div class="little-letter"><p class="shifted">@</p></div>
+              <div class="big-letter"><p>2</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">#</div>
-              <div class="big-letter">3</div>
+              <div class="little-letter"><p class="shifted">#</p></div>
+              <div class="big-letter"><p>3</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">$</div>
-              <div class="big-letter">4</div>
+              <div class="little-letter"><p class="shifted">$</p></div>
+              <div class="big-letter"><p>4</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">%</div>
-              <div class="big-letter">5</div>
+              <div class="little-letter"><p class="shifted">%</p></div>
+              <div class="big-letter"><p>5</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">^</div>
-              <div class="big-letter">6</div>
+              <div class="little-letter"><p class="shifted">^</p></div>
+              <div class="big-letter"><p>6</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">&</div>
-              <div class="big-letter">7</div>
+              <div class="little-letter"><p class="shifted">&</p></div>
+              <div class="big-letter"><p>7</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">*</div>
-              <div class="big-letter">8</div>
+              <div class="little-letter"><p class="shifted">*</p></div>
+              <div class="big-letter"><p>8</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">(</div>
-              <div class="big-letter">9</div>
+              <div class="little-letter"><p class="shifted">(</p></div>
+              <div class="big-letter"><p>9</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">)</div>
-              <div class="big-letter">0</div>
+              <div class="little-letter"><p class="shifted">)</p></div>
+              <div class="big-letter"><p>0</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">-</div>
-              <div class="big-letter">-</div>
+              <div class="little-letter"><p class="shifted">-</p></div>
+              <div class="big-letter"><p>-</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">+</div>
-              <div class="big-letter">=</div>
+              <div class="little-letter"><p class="shifted">+</p></div>
+              <div class="big-letter"><p>=</p></div>
             </button>
             <button id="backspace" class="key-button" type="button">
-              <div class="single-letter">Back</div>
+              <div class="single-letter"><p>Back</p></div>
             </button>
           </div>
           <div id="row2" class="row">
@@ -104,56 +106,56 @@
               <div class="single-letter">Tab</div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">q</div>
-              <div class="big-letter">ㅂ</div>
+              <div class="little-letter"><p><span class="shifted">ㅃ &nbsp&nbsp&nbsp</span>Q</p></div>
+              <div class="big-letter"><p>ㅂ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">w</div>
-              <div class="big-letter">ㅈ</div>
+              <div class="little-letter"><p><span class="shifted">ㅉ &nbsp&nbsp&nbsp</span>W</p></div>
+              <div class="big-letter"><p>ㅈ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">e</div>
-              <div class="big-letter">ㄷ</div>
+              <div class="little-letter"><p><span class="shifted">ㄸ &nbsp&nbsp&nbsp</span>E</p></div>
+              <div class="big-letter"><p>ㄷ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">r</div>
-              <div class="big-letter">ㄱ</div>
+              <div class="little-letter"><p><span class="shifted">ㄲ &nbsp&nbsp&nbsp</span>R</p></div>
+              <div class="big-letter"><p>ㄱ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">t</div>
-              <div class="big-letter">ㅅ</div>
+              <div class="little-letter"><p><span class="shifted">ㅆ &nbsp&nbsp&nbsp</span>T</p></div>
+              <div class="big-letter"><p>ㅅ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">y</div>
-              <div class="big-letter">ㅛ</div>
+              <div class="little-letter"><p>Y</p></div>
+              <div class="big-letter"><p>ㅛ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">u</div>
-              <div class="big-letter">ㅕ</div>
+              <div class="little-letter"><p>U</p></div>
+              <div class="big-letter"><p>ㅕ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">i</div>
-              <div class="big-letter">ㅑ</div>
+              <div class="little-letter"><p>I</p></div>
+              <div class="big-letter"><p>ㅑ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">i</div>
-              <div class="big-letter">ㅐ</div>
+              <div class="little-letter"><p><span class="shifted">ㅒ &nbsp&nbsp&nbsp</span>O</p></div>
+              <div class="big-letter"><p>ㅐ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">p</div>
-              <div class="big-letter">ㅔ</div>
+              <div class="little-letter"><p><span class="shifted">ㅖ &nbsp&nbsp&nbsp</span>p</p></div>
+              <div class="big-letter"><p>ㅔ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">{</div>
-              <div class="big-letter">[</div>
+              <div class="little-letter"><p class="shifted">{</p></div>
+              <div class="big-letter"><p></p>[</div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">}</div>
-              <div class="big-letter">]</div>
+              <div class="little-letter"><p class="shifted">}</p></div>
+              <div class="big-letter"><p>]</p></div>
             </button>
             <button id="back-slash" class="key-button" type="button">
-              <div class="little-letter">|</div>
-              <div class="big-letter">\</div>
+              <div class="little-letter"><p class="shifted">|</p></div>
+              <div class="big-letter"><p>\</p></div>
             </button>
           </div>
           <div id="row3" class="row">
@@ -161,98 +163,98 @@
             <div class="single-letter">Cap</div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">a</div>
-              <div class="big-letter">ㅁ</div>
+              <div class="little-letter"><p>A</p></div>
+              <div class="big-letter"><p>ㅁ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">s</div>
-              <div class="big-letter">ㄴ</div>
+              <div class="little-letter"><p>S</p></div>
+              <div class="big-letter"><p>ㄴ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">d</div>
-              <div class="big-letter">ㅇ</div>
+              <div class="little-letter"><p>D</p></div>
+              <div class="big-letter"><p>ㅇ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">f</div>
-              <div class="big-letter">ㄹ</div>
+              <div class="little-letter"><p>F</p></div>
+              <div class="big-letter"><p>ㄹ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">g</div>
-              <div class="big-letter">ㅎ</div>
+              <div class="little-letter"><p>G</p></div>
+              <div class="big-letter"><p>ㅎ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">h</div>
-              <div class="big-letter">ㅗ</div>
+              <div class="little-letter"><p>H</p></div>
+              <div class="big-letter"><p>ㅗ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">j</div>
-              <div class="big-letter">ㅓ</div>
+              <div class="little-letter"><p>J</p></div>
+              <div class="big-letter"><p>ㅓ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">k</div>
-              <div class="big-letter">ㅏ</div>
+              <div class="little-letter"><p>K</p></div>
+              <div class="big-letter"><p>ㅏ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">l</div>
-              <div class="big-letter">ㅣ</div>
+              <div class="little-letter"><p>L</p></div>
+              <div class="big-letter"><p>ㅣ</p></div>
             </button><button class="key-button" type="button">
-              <div class="little-letter">:</div>
-              <div class="big-letter">;</div>
+              <div class="little-letter"><p class="shifted">:</p></div>
+              <div class="big-letter"><p>;</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">"</div>
-              <div class="big-letter">'</div>
+              <div class="little-letter"><p class="shifted">"</p></div>
+              <div class="big-letter"><p>'</p></div>
             </button>
             <button id="enter" class="key-button" type="button">
-              <div class="single-letter">Enter</div>
+              <div class="single-letter"><p>Enter</p></div>
             </button>
           </div>
           <div id="row4" class="row">
             <button id="shift-L" class="key-button" type="button">
-            <div class="single-letter">Shift</div>
+            <div class="single-letter"><p class="shifted">Shift</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">z</div>
-              <div class="big-letter">ㅋ</div>
+              <div class="little-letter"><p>Z</p></div>
+              <div class="big-letter"><p>ㅋ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">x</div>
-              <div class="big-letter">ㅌ</div>
+              <div class="little-letter"><p>X</p></div>
+              <div class="big-letter"><p>ㅌ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">c</div>
-              <div class="big-letter">ㅊ</div>
+              <div class="little-letter"><p>C</p></div>
+              <div class="big-letter"><p>ㅊ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">v</div>
-              <div class="big-letter">ㅍ</div>
+              <div class="little-letter"><p>V</p></div>
+              <div class="big-letter"><p>ㅍ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">b</div>
-              <div class="big-letter">ㅠ</div>
+              <div class="little-letter"><p>B</p></div>
+              <div class="big-letter"><p>ㅠ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">n</div>
-              <div class="big-letter">ㅜ</div>
+              <div class="little-letter"><p>N</p></div>
+              <div class="big-letter"><p>ㅜ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">m</div>
-              <div class="big-letter">ㅡ</div>
+              <div class="little-letter"><p>M</p></div>
+              <div class="big-letter"><p>ㅡ</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter"><</div>
-              <div class="big-letter">,</div>
+              <div class="little-letter"><p class="shifted"><</p></div>
+              <div class="big-letter"><p>,</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">></div>
-              <div class="big-letter">.</div>
+              <div class="little-letter"><p class="shifted">></p></div>
+              <div class="big-letter"><p>.</p></div>
             </button>
             <button class="key-button" type="button">
-              <div class="little-letter">?</div>
-              <div class="big-letter">/</div>
+              <div class="little-letter"><p class="shifted">?</p></div>
+              <div class="big-letter"><p>/</p></div>
             </button>
             <button id="shift-R" class="key-button" type="button">
-              <div class="single-letter">Shift</div>
+              <div class="single-letter"><p class="shifted">Shift</p></div>
             </button>
           </div>
           <div id="row5" class="row">
@@ -277,6 +279,11 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div id="copyright">
+          <p><small>&copy; 2020 Jason Ko All rights reserved.</small><p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -3,20 +3,20 @@
   margin: 0;
 }
 body{
-  background-color:lightgray;
+  background-color:#e0e0eb;
 }
 #whole-wrapper{
-  border: 1px solid black;
+  border: 1px solid #7575a3;
   border-radius: 50px;
   width: 800px;
-  height: 700px;
-  margin: 0 auto;
+  height: 800px;
+  margin: 10px auto 20px auto;
 }
 header{
   width:100%;
   height: 150px;
   text-align: center;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #7575a3;
 }
 header nav li{
   padding: 0;
@@ -61,6 +61,12 @@ header h1{
   float: left;
   margin: 1px;
   width: 50px;
+}
+#clear{
+  margin-right: 30px;
+}
+#search-dic{
+  width:65px;
 }
 #control-scale{
   float: right;
@@ -110,6 +116,9 @@ header h1{
 .big-letter{
   font-size: 1rem;
 }
+.shifted{
+  color:#8A2BE2;
+}
 #keyboard #backspace{
   width: 80px;
 }
@@ -151,4 +160,10 @@ header h1{
 }
 #keyboard #row5 #alt-R{
   width: 65px;
+}
+footer{
+  margin-top: 150px;
+}
+footer #copyright{
+  text-align: center;
 }
