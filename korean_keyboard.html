@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="korean_keyboard.css">
+    <title>Korean Keyboard Online</title>
+  </head>
+  <body>
+    <div id="whole-wrapper">
+      <header>
+        <h1>Simple Korean Keyboard Online</h1>
+      </header>
+      <div id="screen">
+        <textarea name="screen" rows="8" cols="70" autofocus></textarea>
+      </div>
+      <div id="control-menu">
+        <div>
+          <button class="control-btn" type="button">Copy Text</button>
+          <button class="control-btn" type="button">Save Text</button>
+          <button class="control-btn" type="button">Clear Text</button>
+          <button class="control-btn" type="button">Search Google</button>
+        </div>
+        <div id="control-scale">
+          <label for="font-size">Font Size</label>
+          <input type="range" id="font-size" value="5" min="0" max="10">
+        </div>
+      </div>
+      <div id="keyboard-section">
+        <div id="keyboard">
+          <div id="row1" class="row">
+            <button class="key-button" type="button">
+              <div class="little-letter">~</div>
+              <div class="big-letter">`</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">!</div>
+              <div class="big-letter">1</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">@</div>
+              <div class="big-letter">2</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">#</div>
+              <div class="big-letter">3</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">$</div>
+              <div class="big-letter">4</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">%</div>
+              <div class="big-letter">5</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">^</div>
+              <div class="big-letter">6</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">&</div>
+              <div class="big-letter">7</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">*</div>
+              <div class="big-letter">8</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">(</div>
+              <div class="big-letter">9</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">)</div>
+              <div class="big-letter">0</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">-</div>
+              <div class="big-letter">-</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">+</div>
+              <div class="big-letter">=</div>
+            </button>
+            <button id="backspace" class="key-button" type="button">
+              <div class="single-letter">Back</div>
+            </button>
+          </div>
+          <div id="row2" class="row">
+            <button id="tab" class="key-button" type="button">
+              <div class="single-letter">Tab</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">q</div>
+              <div class="big-letter">ㅂ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">w</div>
+              <div class="big-letter">ㅈ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">e</div>
+              <div class="big-letter">ㄷ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">r</div>
+              <div class="big-letter">ㄱ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">t</div>
+              <div class="big-letter">ㅅ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">y</div>
+              <div class="big-letter">ㅛ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">u</div>
+              <div class="big-letter">ㅕ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">i</div>
+              <div class="big-letter">ㅑ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">i</div>
+              <div class="big-letter">ㅐ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">p</div>
+              <div class="big-letter">ㅔ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">{</div>
+              <div class="big-letter">[</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">}</div>
+              <div class="big-letter">]</div>
+            </button>
+            <button id="back-slash" class="key-button" type="button">
+              <div class="little-letter">|</div>
+              <div class="big-letter">\</div>
+            </button>
+          </div>
+          <div id="row3" class="row">
+            <button id="cap" class="key-button" type="button">
+            <div class="single-letter">Cap</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">a</div>
+              <div class="big-letter">ㅁ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">s</div>
+              <div class="big-letter">ㄴ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">d</div>
+              <div class="big-letter">ㅇ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">f</div>
+              <div class="big-letter">ㄹ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">g</div>
+              <div class="big-letter">ㅎ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">h</div>
+              <div class="big-letter">ㅗ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">j</div>
+              <div class="big-letter">ㅓ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">k</div>
+              <div class="big-letter">ㅏ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">l</div>
+              <div class="big-letter">ㅣ</div>
+            </button><button class="key-button" type="button">
+              <div class="little-letter">:</div>
+              <div class="big-letter">;</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">"</div>
+              <div class="big-letter">'</div>
+            </button>
+            <button id="enter" class="key-button" type="button">
+              <div class="single-letter">Enter</div>
+            </button>
+          </div>
+          <div id="row4" class="row">
+            <button id="shift-L" class="key-button" type="button">
+            <div class="single-letter">Shift</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">z</div>
+              <div class="big-letter">ㅋ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">x</div>
+              <div class="big-letter">ㅌ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">c</div>
+              <div class="big-letter">ㅊ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">v</div>
+              <div class="big-letter">ㅍ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">b</div>
+              <div class="big-letter">ㅠ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">n</div>
+              <div class="big-letter">ㅜ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">m</div>
+              <div class="big-letter">ㅡ</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter"><</div>
+              <div class="big-letter">,</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">></div>
+              <div class="big-letter">.</div>
+            </button>
+            <button class="key-button" type="button">
+              <div class="little-letter">?</div>
+              <div class="big-letter">/</div>
+            </button>
+            <button id="shift-R" class="key-button" type="button">
+              <div class="single-letter">Shift</div>
+            </button>
+          </div>
+          <div id="row5" class="row">
+            <button id="ctr-L" class="key-button" type="button">
+              <div class="single-letter">Ctrl</div>
+            </button>
+            <button id="window" class="key-button" type="button">
+              <div class="single-letter">Win</div>
+            </button>
+            <button id="alt-L" class="key-button" type="button">
+              <div class="single-letter">Alt</div>
+            </button>
+            <button id="space" class="key-button" type="button">
+              <div class="single-letter">Space</div>
+            </button>
+            <button id="alt-R" class="key-button" type="button">
+              <div class="single-letter">Alt</div>
+            </button>
+            <button id="ctr-R" class="key-button" type="button">
+              <div class="single-letter">Ctr</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

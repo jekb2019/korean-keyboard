@@ -1,0 +1,134 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color:lightgray;
+}
+#whole-wrapper{
+  border: 1px solid black;
+  width: 800px;
+  height: 1000px;
+  margin: 0 auto;
+}
+header{
+  width:100%;
+  height: 110px;
+  border: 1px solid black;
+}
+header h1{
+  text-align: center;
+  line-height: 3.5;
+  font-weight: 300;
+}
+#screen{
+  margin-left: 80px;
+}
+#screen textarea{
+  width: 630px;
+  height: 150px;
+  resize: vertical;
+  font-size: 2rem;
+  background-color: white;
+}
+#control-menu{
+  margin-left: 80px;
+  display: inline-block;
+  width: 630px;
+}
+.control-btn{
+  float: left;
+  margin: 1px;
+  width: 50px;
+}
+#control-scale{
+  float: right;
+}
+#control-scale #font-size{
+  -webkit-appearance: none;
+  height: 10px;
+  background: white;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+#control-scale #font-size:hover {
+  opacity: 1;
+}
+#control-scale #font-size::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: black;
+  cursor: pointer;
+}
+#control-scale #font-size::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+#keyboard{
+  border:black solid 1px;
+  display: inline-block;
+  margin: 10px 0 0 80px;
+}
+.key-button{
+  width:40px;
+  height:40px;
+  float: left;
+  margin: 1px;
+}
+.single-letter{
+  font-size: 1.1rem;
+}
+.little-letter{
+  font-size: 0.7rem;
+}
+.big-letter{
+  font-size: 1rem;
+}
+#keyboard #backspace{
+  width: 80px;
+}
+.row{
+  clear: left;
+}
+#keyboard #tab{
+  width: 60px;
+}
+#keyboard #back-slash{
+  width:60px;
+}
+#keyboard #cap{
+  width:80px;
+}
+#keyboard #enter{
+  width:82px;
+}
+#keyboard #shift-L{
+  width:100px;
+}
+#keyboard #shift-R{
+  width:104px;
+}
+#keyboard #row5 #space{
+  width: 251px;
+}
+#keyboard #row5 #ctr-L{
+  width: 85px;
+}
+#keyboard #row5 #ctr-R{
+  width: 90px;
+}
+#keyboard #row5 #window{
+  width: 60px;
+}
+#keyboard #row5 #alt-L{
+  width: 65px;
+}
+#keyboard #row5 #alt-R{
+  width: 65px;
+}
