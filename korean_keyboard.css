@@ -38,8 +38,14 @@ header h1{
   margin-left: 80px;
   width:630px;
 }
+#status{
+  float: right;
+  width: 450px;
+  text-align: center;
+}
 #language #language-select{
   float: right;
+  margin-bottom: 5px;
 }
 #screen{
   margin-top: 30px;
@@ -49,7 +55,7 @@ header h1{
   width: 630px;
   height: 150px;
   resize: vertical;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   background-color: white;
 }
 #control-menu{
